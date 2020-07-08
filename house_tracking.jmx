@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">3600</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;logs&quot;: [&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;0oJ6QU5fLnIBTFWBx82Lmj3Fq2L99GY9Q3zEXc7Jn4JGs12hV92gcv2ThmLV4Fm5GOTJ3iXd5AsbAyPQ4KOo48NLN8PWeXORgb1rrFXK6e851Vjyt7C2Rnitcmd7a070GGUe98InHvzeGM0E2G//OIVTFytUAZ2EzqY+VELhV6O7N3WQUUw0f4mlvDSljgEJCRuOtgHx/T7B/E6GyPNxpniJDDI+cOCNqyemuytX+pEBQ7pke/e68N+vRoMwxageNHiuwwz6/1h3EJ7KcZlzX08HO2y+64ad7tYCVqkAbiKlna+QAkx/S7PFgCf8NI8LzuA73A+QUqQ7KalAui3r5x2Gx6UBxCq2bhHl090rn8/2TmRmwMjEoydOKxWEDHS0BcyeMTwBETYHteHHr1G0lL54OSaxqS4vPjcrn4D7hpsNmvJhkdRVI27wtx8iLin7H7NAU0Oos1Pefp3Y4rMjx9ngf2hZrGCbnGX76lRIZh8VOoBFChsn4fzEoKufB8wRhW2d9hAigWOIUV4vUzsMdVPIxqMlhh9E5QGiPxVYD3s=&quot;,&#xd;
+            &quot;req_id&quot;: &quot;CE928C97-14C2-4E39-864B-3B131D855B21&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;ReuqestMonitor&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 4,&#xd;
+            &quot;uid&quot;: &quot;${uid}&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;${activity_pageview}&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;InHouseTracking&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 3,&#xd;
+            &quot;uid&quot;: &quot;${uid}&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;${activity_exposure}&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;InHouseTracking&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 3,&#xd;
+            &quot;uid&quot;: &quot;${uid}&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;0oJ6QU5fLnIBTFWBx82Lmj3Fq2L99GY9Q3zEXc7Jn4JGs12hV92gcv2ThmLV4Fm50JM+40dp/Xf8z2ygCQ3DNhYHZYr1DNJZg8WQDWdTV/eBp2hYgtkJsjR+W4xQZOz4XlAokgsdsLCOzog2qdahY/LDOKi3YDESFB6HutdsX1soh6ett1Pu2on2Q5fQXwW/v4vSe2GfSRMoH4v+V4uP0gWmgH3diA7VJJjpmi5zzaAW6eZ0DsUfhie4rHcIWy4h2sqhBzJUiSKqOjNtDficifXhDiCvV3U6+AgjMA4NJ7kpQDdJMkjVjiVNzJZDw1vc4KRAIETGAqt/cTS2lxgWu8ysU4mLFk5USPOsNhw5IL61QL3w621xifBy1ugjuyCp1/acL3nSPNE+nziFOFGkBg==&quot;,&#xd;
+            &quot;req_id&quot;: &quot;7ED05E7E-597B-4A36-A0B4-04EBB66D2E1C&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;ReuqestMonitor&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 4,&#xd;
+            &quot;uid&quot;: &quot;dcd664f3cb1834c3c01a7d30adf5c6efe8&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;0oJ6QU5fLnIBTFWBx82Lmj3Fq2L99GY9Q3zEXc7Jn4JGs12hV92gcv2ThmLV4Fm5kr4d+tHBHoHhDCSm2iHc1BalvFI4XPycfzgeoGsQIphsSMZCC6UUtmq0lvi1q/CED6J0nZ3NMYQNktWxQJ6vnmwlH9Rv0YBoSXHAZySarZDApUZBMuiINuV37JnsbPM91Lacb7X+zjJtY7uhr2tbWBPE8qgIRzZukUfTx1nRgqnEp5CnoWrqmNpAr9jivuALgd9pxzh46lDwjeJeLRmZbeceuvD3J5eDFqwI+hKKGdJrqWcLgN8gvkXT67sJct6/jAPq4IkKOHAG9hMHL/NUtqsZpMgpR3OHM3MFj7CWCv1bdmjPEuLUHg6R1lM7kNQjtyFCPc0StLNQxmCduYy3pw==&quot;,&#xd;
+            &quot;req_id&quot;: &quot;13527AB2-C5FE-4D7D-BFDD-4A554E4C984B&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;ReuqestMonitor&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 4,&#xd;
+            &quot;uid&quot;: &quot;dcd664f3cb1834c3c01a7d30adf5c6efe8&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;0oJ6QU5fLnIBTFWBx82Lmj3Fq2L99GY9Q3zEXc7Jn4JGs12hV92gcv2ThmLV4Fm593MGM+bMe+63dbAf31SjHri84bjMBaCExI5jwWnvpKxRIjpLLzgFN8dnV3atZ9GevO2FnYnxzmWtggHS+m+1rCyQXyyeH0PxMcOmh/EDMHuuxmgfDxzj9XlfRHD3U8ayQ2dlthqY1Um/NwVQeNBMc7PWoVFge0PBBi0Xwa2gyOtRIzoqMeKWnUL0oAVBfnnzvBCMP3POXHkNO4txQPWN5K3dZ/1XiTVq3hAULFhAdfwJ2+yJQt65YGX8tMIqIqQVDwaM1TWdDjG55pjH5kYNhy2xiyVhXPvCb0R89NON1TB8b2xATG1WbPcqurWD6ZS95tbd/2NojsikAhMND5hsSA==&quot;,&#xd;
+            &quot;req_id&quot;: &quot;995186E4-71B5-45D4-823C-7DB473AF785E&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;ReuqestMonitor&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 4,&#xd;
+            &quot;uid&quot;: &quot;dcd664f3cb1834c3c01a7d30adf5c6efe8&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;0oJ6QU5fLnIBTFWBx82LmnLCvC5XS4bfy+LZIX+KFSVUs73473XhPYlN0w+XSGHQq3VmQoaDTVDAtvHl9QyT4e15gvhgtgBXUEiOFhLWJ+N+DYiCgS7KhkXUugyEcykXKoIF1OgMWgGYElZijPN8x52Rvnays7ylXT39oKQG15Rn6SNI3U3JJTFOCgQp9e9bl/WBc41nnF+oFH3mQ84jTNxUgeY8RN31uuHL+uNBrpSo8VVGX/U6goeChulyaTN3WUmV3o6HFmx1s0WiQJRJdjEKdquAQxKVcWtBlFM2VTVEvE0C6Q7NCWJDfBEJgdH0QmDvGpOc/J6CIjDnbMsH3YfwgmLdNS4Y2Scwiv0kyql7pyERZ1nFOrgCrIiXCVk2CpJWIV0qZUJLf0QUI9WecgzeJ83xETUGIaGgtDfvpM7QtvI/RpLHPkrJMbFnJOAlHEomZeSFiFZK9imreF6ylDE9T3yxIUU5AFencE+taz/L5O/ipo2IENwnV0RFjnEyD21UOoTlC9n7ybSAwdKD9sOScE+pYyYMC3OUUipsBoEjnpDfGPMHOG8HW5MsIasNVFduKyYYKKMy2uCWl5Oazt1tz9IYvI9GhrWAVFjRx5anbL9a2Q3tIqhIcCJRYvEzWTMosgbtLvW2C6h1mYBjsxXVTUac4dSCJbeNjYzWRup5YBX0qUSXAwoiPm8+xnyHMiQa/lUaBiTen9k+kbRz4mUBx3zQ6IVvCA2gwEl1eNkeIl/OMH5x649KzoOwCzk0Q8zK78z3lTnFTV3E9ZNs60cNSyHRVfZeg3Gd5GDZkQajTzlTgC88uxNPfMauPuO/l0CFAbTag9PAOrVqsdJcXVDpC1rrosJZX1F+R9Yk5vDsNiw2xSx1pysWJerv8W3r9g7iF6LhmURtMks/ThcixRcdDDvNFZmTdsrXsdj72lcUXRJk9Xx8shQ1N9w8RqgGD75bZSg89BVsBjqoe1wTEDC/RmlDkymvL9fZI8h+LAEemh0G0d2OsLG09Sql1WWDq5h/vUvrEEfMqfu5k+a4tZjrzNHCtqmPm1viMz+mBOhPvsGF7oBcY/LTmaFVqzsB1qm44KyCzGGaNKfm1EAe9CfxtEVuD+FsXIfvXdrVyLD8xQ0DK9R79zV+k48LJ0HU&quot;,&#xd;
+            &quot;req_id&quot;: &quot;F55306A6-2C65-4E94-B3F9-11547A3DD73E&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;ReuqestMonitor&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 4,&#xd;
+            &quot;uid&quot;: &quot;dcd664f3cb1834c3c01a7d30adf5c6efe8&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;0oJ6QU5fLnIBTFWBx82Lmj3Fq2L99GY9Q3zEXc7Jn4JGs12hV92gcv2ThmLV4Fm50JM+40dp/Xf8z2ygCQ3DNsll80ITxuXxQY5du5SDeSf3HZbxAzJQCN6VD9feTQaP0G+zhXnIWnfdQKe4GcSvZCMUsOI6G2LBl6Q58FNRI2mZOBArJjTUXOx+MZ65q5pR1Lt6q+vmAl11xcEh4GmGYB1Djy6WNbogyTq8kT/dNrJNbeYi057XXiWUI5KIZi8iwj4Ca2iwpFxiLA51RHReYtTjUdHIN7x+YOpLcfLPEeTnE3E9WM0/qRlqyH5VtAvXkE2DZcwwYN26tqkbcAuna+IhbEA8G+s7vh4aRjQWVQuQvMcuiXP6HKvWBH+1ClW0sZUbFwA257GngDAj0HsAXQowWCHRzVNzgK6oPOpqYI/tq9AOGiEAxkkF5fptADw9&quot;,&#xd;
+            &quot;req_id&quot;: &quot;E7F38A3F-1632-4FBA-984E-048CDEE5CACE&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;ReuqestMonitor&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 4,&#xd;
+            &quot;uid&quot;: &quot;dcd664f3cb1834c3c01a7d30adf5c6efe8&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;${activity_click}&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;InHouseTracking&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 3,&#xd;
+            &quot;uid&quot;: &quot;${uid}&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;${city_pageview}&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;InHouseTracking&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 3&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;0oJ6QU5fLnIBTFWBx82Lmj3Fq2L99GY9Q3zEXc7Jn4JGs12hV92gcv2ThmLV4Fm5kr4d+tHBHoHhDCSm2iHc1O4tPOxo0yRMO48GDcDK3scGWhz4n/Sjvkwq4FhdOwmJQ8i7IzrKCyZ9mHBMSxcg1QC3Cvm9i1Y3nHwjjYzFoQA24OdifeWDdX3Ffp7CszLSzqnGIQdeaR+UA1G3vIZNJoJzQC3bDL88C6xKS6opRCU5FSBLMq2XwWWpWuxeORrq6lAAt3PPlUpMnI961HqeWyBOr/JidksDe5MKq0VUBd5EHhaoflCO45x+Db9iQ4fAt/y9jgLW1VeAAmGLEgIYFKHdFrDHt3yVuo/0mHSIoySGplJYrlNdzzM2meUeDaVdyXirjbrGNy3k2s1OLIVJQQ==&quot;,&#xd;
+            &quot;req_id&quot;: &quot;D29009B0-04FB-4B41-8DA1-35D3C952DC7D&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;ReuqestMonitor&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 4,&#xd;
+            &quot;uid&quot;: &quot;dcd664f3cb1834c3c01a7d30adf5c6efe8&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;0oJ6QU5fLnIBTFWBx82Lmoudl+yuFvRRVUaszsom28KblTPHz0rXixJJI+hkZAqgEPoktp/B9eza9n0ns5GfY1gPn2FHrZGpGauQdOmx029o9RNSDnPgOdOaVpOVGa3LfXeaG45p4hTri7JvAAa/2N7dhKeLHDqk/Xa0QC+JWijl+BzN8sWmFgjDriSCe7NbhgTdwInf5WGa8qR0qi4uavu/MCJzf4fXMFXvH41JfNABkf2Flw1MmxYGX7JLwB8l7hPOyzkwZG4lTt0aD6InBDz2LOk3IUNcslyCOGICY4VDaA1SRDeM2QGlrqK7DEFHlL1ndxXmW4HI3S86Li0mPxVfVT/e34QlYA7AfMde5bp18mFru5gAEGYQzOP8OJ9K8l+RtvKYiWiXUlE9FOREwOUKhHdn1Tsqirtnff89VeK4ibeflGKKqbINtYsCYRL8GpjGGZyShy8jw+8RATHRhda9ZEQAi9SYUWH0UrSyZGe/NhBJg4qwyQwWFVzomse9&quot;,&#xd;
+            &quot;req_id&quot;: &quot;B43F92D0-522A-4AFA-A772-1C7A37EE2B61&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;ReuqestMonitor&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 4,&#xd;
+            &quot;uid&quot;: &quot;dcd664f3cb1834c3c01a7d30adf5c6efe8&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;${country_pageview}&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;InHouseTracking&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 3&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;${activity_click}&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;InHouseTracking&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 3,&#xd;
+            &quot;uid&quot;: &quot;${uid}&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;${activity_exposure}&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;InHouseTracking&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 3,&#xd;
+            &quot;uid&quot;: &quot;${uid}&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;api_ver&quot;: &quot;7.1&quot;,&#xd;
+            &quot;app_ver&quot;: &quot;5.37.0&quot;,&#xd;
+            &quot;code_ver&quot;: &quot;2&quot;,&#xd;
+            &quot;level&quot;: &quot;I&quot;,&#xd;
+            &quot;log_ver&quot;: 1,&#xd;
+            &quot;message&quot;: &quot;0oJ6QU5fLnIBTFWBx82Lmoudl+yuFvRRVUaszsom28KblTPHz0rXixJJI+hkZAqgEPoktp/B9eza9n0ns5GfY1gPn2FHrZGpGauQdOmx029o9RNSDnPgOdOaVpOVGa3LfXeaG45p4hTri7JvAAa/2N7dhKeLHDqk/Xa0QC+JWihQGE4UfNevTGU1lygDrkfIJbhodRViWZdq7DupR5y8NY99BVAoj5ayV/QruGqv83nkGxgB7oQy1davsLInyJyRTPI+oYXCLHFuAbIJNnFCe+dCJqvVCr5raBv5bAzYgjHCzU9IRB2tlzkLRn9Lu56Kqg7NMekXDX8XOb+RJOAyv0LC8F0kczG4/8Zk/sXvJR6ejioaT82W12S5U2brCjACWw1Z77o4AaJhzBZPocn4xYO4ZEDDiJrKmj/Whf12ROl/teD83BkRSVxovy0LqPaW7I4c9kRJ72mjyea7OVmHvqCk4FC2Fuv/RsfXulUkQnboIhNPUchj4bp6fXgcT72t&quot;,&#xd;
+            &quot;req_id&quot;: &quot;8A9B644E-221A-4D54-8C9F-9EC6DFEC0B60&quot;,&#xd;
+            &quot;root&quot;: false,&#xd;
+            &quot;sdk_ver&quot;: &quot;13.4.1&quot;,&#xd;
+            &quot;sys_info&quot;: &quot;iPhone 11&quot;,&#xd;
+            &quot;tag&quot;: &quot;ReuqestMonitor&quot;,&#xd;
+            &quot;timestamp&quot;: ${__time(,)},&#xd;
+            &quot;type&quot;: 4,&#xd;
+            &quot;uid&quot;: &quot;${uid}&quot;&#xd;
+        }&#xd;
+    ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">dev-frontsrv-new.dev.klook.io</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/v2/frontlogsrv/log/app</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="headers" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">:authority:</stringProp>
+                <stringProp name="Header.value">dev-frontsrv-new.dev.klook.io </stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">version</stringProp>
+                <stringProp name="Header.value">7.0</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">sdkversion</stringProp>
+                <stringProp name="Header.value">9</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">klook-app-version</stringProp>
+                <stringProp name="Header.value">5.35.0 </stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">klook-app-version-code</stringProp>
+                <stringProp name="Header.value">6184</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Android Dalvik/2.1.0 (Linux; U; Android 9; SM-G9600 Build/PPR1.180610.011) </stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-platform</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-signature</stringProp>
+                <stringProp name="Header.value">5b1b28d34592b24befc408c8f8ddfb5dae5c828b06e60594b0470398f0dafdb6</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">accept-encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-deviceid</stringProp>
+                <stringProp name="Header.value">${device_id}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV activity_pageview" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">activity_pageview_aes.txt</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">activity_pageview</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV activity_exposure" enabled="true">
+            <stringProp name="filename">activity_exposure_aes.txt</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">activity_exposure</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV activity_click" enabled="true">
+            <stringProp name="filename">activity_click_aes.txt</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">activity_click</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV city_pageview" enabled="true">
+            <stringProp name="filename">city_pageview_aes.txt</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">city_pageview</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV country_pageview" enabled="true">
+            <stringProp name="filename">country_pageview_aes.txt</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">country_pageview</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV device id" enabled="true">
+            <stringProp name="filename">deviceid.txt</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">device_id</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV uid" enabled="true">
+            <stringProp name="filename">uid.txt</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">uid</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
